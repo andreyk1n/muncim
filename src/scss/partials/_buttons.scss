@@ -1,0 +1,55 @@
+.button {
+    border: 0;
+    outline: 0;
+    transition-duration: .5s;
+    border-radius: 100px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 4px 18px;
+
+    &:hover {
+        transform: scale(0.95);
+        opacity: .5;
+    }
+
+
+    &__white {
+        background-color: #fff;
+    }
+
+    &__green {
+        background-color: #99FF91;
+    }
+
+    &__blue {
+        background-color: #B3B5FF;
+    }
+
+    &__yellow {
+        background-color: #FFE8A3;
+    }
+
+    &__header {
+        padding: 8px 12px;
+
+        &--active {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+    &__footer {
+        padding: 8px 17px;
+        font-size: clamp(20px, 2vw, 36px);
+
+        &--active {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+}
