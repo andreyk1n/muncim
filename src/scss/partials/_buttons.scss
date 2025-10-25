@@ -10,12 +10,14 @@
     font-size: 19px;
     font-weight: 700;
     padding: 4px 18px;
+    max-width: fit-content;
+    cursor: pointer;
+    text-wrap: nowrap;
 
     &:hover {
         transform: scale(0.95);
         opacity: .5;
     }
-
 
     &__white {
         background-color: #fff;

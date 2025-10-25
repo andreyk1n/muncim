@@ -113,6 +113,12 @@ h1 {
     @include adaptiveValue('font-size', 60px, 24px);
 }
 
+h2 {
+    font-size: clamp(26px, 5vw, 72px);
+    color: #000;
+    text-transform: uppercase;
+}
+
 // Cтилізація ектів статусу для поточної сторінки
 .currentPage {
     text-decoration: underline;
