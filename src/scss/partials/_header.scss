@@ -6,30 +6,89 @@
     position: fixed;
     top: 0;
     left: 0;
-    transition: top $transitionDuration;
+    transition-duration: 1s;
+    padding: 28px 0;
+    background-color: #cacaca;
+
+    @media (max-width: 992px) {
+        padding: 15px 0;
+    }
+
+    &--scrolled {
+        padding: 15px 0;
+
+
+        .header__logo {
+            margin: 0;
+
+            img {
+                width: 240px;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+
+        @media (max-width: 992px) {
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        align-self: flex-start;
+        transition-duration: .7s;
+        position: absolute;
+        margin: 30px 0 0 0;
+        z-index: 12;
+
+        @media (max-width: 992px) {
+            margin: 0;
+            position: static;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            transition-duration: 1s;
+
+            @media (max-width: 992px) {
+                width: 240px;
+            }
+        }
+    }
 
     &__nav {
         width: 100%;
         max-width: 715px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         gap: 15px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
+            gap: 28px;
             position: absolute;
-            right: -100%; 
+            right: -100%;
             top: 0;
+            padding: 120px 20px 50px 0;
             flex-direction: column;
-            gap: 25px;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-end;
+            justify-content: flex-start;
             width: 100%;
-            min-height: 100vh; 
-            background-color: #ffffff;
+            min-height: 100vh;
+            max-height: 100vh;
+            background-color: #cacaca;
             transition-duration: $transitionDuration;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
-    
+
         &.active {
             right: 0; // Коли активне, меню буде видно
         }
@@ -50,45 +109,47 @@
             cursor: pointer;
             position: relative;
             z-index: 11;
-        
+
             span {
                 display: block;
                 width: 100%;
-                height: 2px;
+                height: 4px;
                 background-color: $buttonBgColor;
                 position: relative;
                 transition-duration: $transitionDuration;
-        
+                border-radius: 8px;
+
                 &::before,
                 &::after {
                     content: "";
                     position: absolute;
                     width: 100%;
-                    height: 2px;
+                    height: 4px;
                     background-color: $buttonBgColor;
                     transition-duration: $transitionDuration;
+                    border-radius: 8px;
                 }
-        
+
                 &::before {
-                    top: -10px; 
+                    top: -10px;
                 }
-        
+
                 &::after {
-                    top: 10px; 
+                    top: 10px;
                 }
             }
-    
+
             &.active span {
-                background-color: transparent; 
-        
+                background-color: transparent;
+
                 &::before {
                     top: 0;
-                    transform: rotate(45deg); 
+                    transform: rotate(45deg);
                 }
-        
+
                 &::after {
                     top: 0;
-                    transform: rotate(-45deg); 
+                    transform: rotate(-45deg);
                 }
             }
         }

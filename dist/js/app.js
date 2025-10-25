@@ -23,8 +23,8 @@
 // **Бургер-меню**
 // Додає клас .active для елементів .header__burger і .header__nav при кліку.
 // Інструкція: https://andreyk1n.github.io/starter-theme-docs/burger_menu.html
-// import { initBurgerMenu } from './functions/initBurgerMenu.js';
-// initBurgerMenu(); // Ініціалізація бургер-меню
+import { initBurgerMenu } from './functions/initBurgerMenu.js';
+initBurgerMenu(); // Ініціалізація бургер-меню
 // ==============================================================================================
 
 // ==============================================================================================
@@ -91,3 +91,14 @@
 // import { toggleActive } from './functions/toggleActive.js';
 // toggleActive(); // Ініціалізація функції
 // ==============================================================================================
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    if (window.scrollY > 0) {
+        header.classList.add('header--scrolled');
+    } else {
+        header.classList.remove('header--scrolled');
+    }
+});
