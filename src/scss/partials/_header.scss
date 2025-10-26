@@ -6,9 +6,23 @@
     position: fixed;
     top: 0;
     left: 0;
-    transition-duration: 1s;
+    transition-duration: .4s;
     padding: 28px 0;
     background-color: #cacaca;
+
+    &::after {
+        content: '';
+        width: 0;
+        max-width: 1170px;
+        height: 2px;
+        background-color: #000;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        transition-duration: .7s;
+    }
 
     @media (max-width: 992px) {
         padding: 15px 0;
@@ -17,10 +31,13 @@
     &--scrolled {
         padding: 15px 0;
 
+        &::after {
+            width: 100%;
+        }
 
         .header__logo {
             margin: 0;
-
+            
             img {
                 width: 240px;
             }
@@ -42,7 +59,7 @@
 
     &__logo {
         align-self: flex-start;
-        transition-duration: .7s;
+        transition-duration: .4s;
         position: absolute;
         margin: 30px 0 0 0;
         z-index: 12;
@@ -55,7 +72,7 @@
         img {
             width: 100%;
             height: auto;
-            transition-duration: 1s;
+            transition-duration: .4s;
 
             @media (max-width: 992px) {
                 width: 240px;
