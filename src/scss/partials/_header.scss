@@ -22,6 +22,7 @@
         transform: translateX(-50%);
         bottom: 0;
         transition-duration: .7s;
+        opacity: 0;
     }
 
     @media (max-width: 992px) {
@@ -33,6 +34,7 @@
 
         &::after {
             width: 100%;
+            opacity: 1;
         }
 
         .header__logo {
