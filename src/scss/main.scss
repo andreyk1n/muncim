@@ -3,6 +3,7 @@
 @use 'partials/header';
 @use 'partials/footer';
 @use 'partials/buttons';
+@use 'components/hero';
 
 
 // ==============================================================================================
@@ -110,7 +111,10 @@ ul {
 }
 
 h1 {
-    @include adaptiveValue('font-size', 60px, 24px);
+    font-size: clamp(36px, 5vw, 98px);
+    color: #000;
+    text-transform: uppercase;
+    line-height: 110%;
 }
 
 h2 {
@@ -119,9 +123,11 @@ h2 {
     text-transform: uppercase;
 }
 
-// Cтилізація ектів статусу для поточної сторінки
-.currentPage {
-    text-decoration: underline;
+.label {
+    color: #000;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 // Обнулення стилів автозаповнення форми
