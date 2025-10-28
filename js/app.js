@@ -92,13 +92,16 @@ initBurgerMenu(); // Ініціалізація бургер-меню
 // toggleActive(); // Ініціалізація функції
 // ==============================================================================================
 
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (!header) return;
+const header = document.querySelector('header');
 
+function toggleHeaderScrolled() {
+    if (!header) return;
     if (window.scrollY > 0) {
         header.classList.add('header--scrolled');
     } else {
         header.classList.remove('header--scrolled');
     }
-});
+}
+
+window.addEventListener('scroll', toggleHeaderScrolled);
+window.addEventListener('DOMContentLoaded', toggleHeaderScrolled);
