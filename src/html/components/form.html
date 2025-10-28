@@ -1,15 +1,20 @@
-<form class="form">
-    <div class="form__group">
-        <label for="name" class="form__label">Ваше ім’я</label>
-        <input type="text" id="name" class="form__input" placeholder="Введіть ваше ім’я" required>
+<form class="form" action="/submit" method="post">
+    <p class="form__title">Înscrie-te acum!</p>
+    <p class="form__description">Completează datele corect și atent, nu vrei să greșești ceva și să ratezi vreo oportunitate foarte bună. Atenție mare!</p>
+    <div class="form__field">
+        <label for="name" class="form__label">Nume</label>
+        <input type="text" id="name" name="name" class="form__input" placeholder="Введіть ваше ім'я" required>
     </div>
-    <div class="form__group">
-        <label for="phone" class="form__label">Ваш номер телефону</label>
-        <input type="tel" id="phone" class="form__input" placeholder="Введіть ваш номер телефону" required>
+
+    <div class="form__field">
+        <label for="phone" class="form__label">Telefon</label>
+        <input type="tel" id="phone" name="phone" class="form__input" placeholder="Введіть номер телефону" required>
     </div>
-    <div class="form__group">
-        <label for="email" class="form__label">Електронна пошта</label>
-        <input type="email" id="email" class="form__input" placeholder="Введіть вашу електронну пошту" required>
+
+    <div class="form__field">
+        <label for="email" class="form__label">E-mail</label>
+        <input type="email" id="email" name="email" class="form__input" placeholder="Введіть email" required>
     </div>
-    <button type="submit" class="form__button">Відправити</button>
+
+    <button type="submit" class="form__button">Mai departe</button>
 </form>

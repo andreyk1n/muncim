@@ -1,0 +1,106 @@
+.cta {
+    margin: 60px 0;
+
+    &__container {
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 100px;
+    }
+
+    .cta__container {
+        padding: 65px 15px;
+    }
+
+    .form {
+        position: sticky;
+        width: 100%;
+        max-width: 668px;
+        top: 90px;
+        background: linear-gradient(180deg, #a8f382 0%, #54d3f8 100%);
+        padding: 48px;
+        border-radius: 36px;
+        border: 1px solid #333;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+        color: #000;
+
+        &__title {
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        &__description {
+            font-size: clamp(18px, 2vw, 20px);
+            color: #000;
+            padding: 0 0 50px 0;
+            line-height: 1.4;
+            max-width: 90%;
+        }
+
+        &__field {
+            position: relative;
+            margin-bottom: 36px;
+        }
+
+        &__label {
+            /* приховуємо лейбли візуально, залишаючи їх для доступності */
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        &__input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #000;
+            background-color: transparent;
+            /* ← повністю прозорий фон */
+            font-size: 18px;
+            padding: 8px 0;
+            color: #000;
+            outline: none;
+            transition: border-color 0.3s ease;
+
+            &::placeholder {
+                color: transparent;
+                /* приховуємо placeholder, як на макеті */
+            }
+
+            &:focus {
+                border-bottom: 2px solid #000;
+                background-color: transparent;
+                /* зберігаємо прозорість навіть при фокусі */
+            }
+        }
+
+        &__button {
+            display: block;
+            width: 100%;
+            background: #000;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            padding: 18px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #222;
+            }
+        }
+    }
+
+}

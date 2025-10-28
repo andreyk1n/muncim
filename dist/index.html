@@ -67,7 +67,7 @@
   </div>
 </header>
   
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="hero__container">
         <div class="hero__text">
             <span class="hero__label label">căutarea s-a încheiat</span>
@@ -78,7 +78,7 @@
                 echipa noastră se ocupă să îți găsească cel mai bun loc de muncă, pe baza cerințelor tale. Dă-ne de
                 lucru!
             </p>
-            <button class="button button__green hero__button">Descoperă <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+            <button class="button button__green hero__button" onclick="window.location.hash = 'start'">Descoperă <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_477)">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -94,6 +94,59 @@
         <img src="./images/hero/image.svg" alt="Hero image" draggable="false" class="hero__image">
     </div>
 </section>
+  
+  <div class="cta" id="start">
+    <div class="cta__container">
+        <div class="cta__text">
+            <span class="label">Uite ce trebuie să faci</span>
+            <h2 class="cta__title">Ca să îți găsim de lucru</h2>
+            <p class="cta__subtitle">Urmează acești 3 pași simpli – iar după ce te înscrii, ne ocupăm noi de tot.</p>
+            <div class="cta__items">
+                <div class="cta__item">
+                    <img data-src="./images/cta/1.svg" alt="1 step" class="lazy">
+                    <div class="cta__item-text">
+                        <p>Te înscrii, foarte simplu, în ­baza de date.</p>
+                        Este singurul lucru pe care trebuie să îl faci, să te înscrii aici pe site, și de aici tu doar aștepți, iar noi ne ocupăm de tot.
+                    </div>
+                </div>
+                 <div class="cta__item">
+                    <img data-src="./images/cta/2.svg" alt="2 step" class="lazy">
+                    <div class="cta__item-text">
+                        <p>Te înscrii, foarte simplu, în ­baza de date.</p>
+                        Este singurul lucru pe care trebuie să îl faci, să te înscrii aici pe site, și de aici tu doar aștepți, iar noi ne ocupăm de tot.
+                    </div>
+                </div>
+                 <div class="cta__item">
+                    <img data-src="./images/cta/3.svg" alt="3 step" class="lazy">
+                    <div class="cta__item-text">
+                        <p>Te înscrii, foarte simplu, în ­baza de date.</p>
+                        Este singurul lucru pe care trebuie să îl faci, să te înscrii aici pe site, și de aici tu doar aștepți, iar noi ne ocupăm de tot.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="form" action="/submit" method="post">
+    <p class="form__title">Înscrie-te acum!</p>
+    <p class="form__description">Completează datele corect și atent, nu vrei să greșești ceva și să ratezi vreo oportunitate foarte bună. Atenție mare!</p>
+    <div class="form__field">
+        <label for="name" class="form__label">Nume</label>
+        <input type="text" id="name" name="name" class="form__input" placeholder="Введіть ваше ім'я" required>
+    </div>
+
+    <div class="form__field">
+        <label for="phone" class="form__label">Telefon</label>
+        <input type="tel" id="phone" name="phone" class="form__input" placeholder="Введіть номер телефону" required>
+    </div>
+
+    <div class="form__field">
+        <label for="email" class="form__label">E-mail</label>
+        <input type="email" id="email" name="email" class="form__input" placeholder="Введіть email" required>
+    </div>
+
+    <button type="submit" class="form__button">Mai departe</button>
+</form>
+    </div>
+</div>
 
   <footer class="footer">
   <div class="footer__container">
