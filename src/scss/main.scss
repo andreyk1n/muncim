@@ -121,9 +121,15 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(26px, 5vw, 72px);
+    font-size: clamp(33px, 5vw, 72px);
     color: #000;
     text-transform: uppercase;
+
+    @media (max-width: 992px) {
+        br {
+            display: none;
+        }
+    }
 }
 
 .label {
@@ -131,21 +137,6 @@ h2 {
     font-size: 21px;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-// Обнулення стилів автозаповнення форми
-input {
-    background: #fff !important;
-}
-
-:-webkit-autofill,
-:-webkit-autofill:hover,
-:-webkit-autofill:focus {
-    filter: none;
-    -webkit-text-fill-color: #333;
-    -webkit-box-shadow: 0 0 0px 40rem #fff inset;
-}
-
-:-webkit-autofill::first-line {
-    font-size: 16px;
+    padding: 0 0 20px 0;
+    display: block;
 }

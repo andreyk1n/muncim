@@ -102,6 +102,7 @@
             width: 100%;
             min-height: 100vh;
             max-height: 100vh;
+            max-width: 450px;
             background-color: #cacaca;
             transition-duration: $transitionDuration;
             overflow-y: auto;
