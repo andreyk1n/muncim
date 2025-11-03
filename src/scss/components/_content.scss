@@ -18,9 +18,16 @@
         padding: 0 15px 60px 15px;
     }
 
-        &--companies {
+    &--companies {
         .content__container {
             padding: 60px 15px;
+        }
+    }
+
+    &--team {
+        .content__container {
+            padding: 60px 15px;
+            gap: 30px;
         }
     }
 
@@ -60,5 +67,14 @@
         display: flex;
         gap: 16px;
         align-items: center;
+
+        @media (max-width: 450px) {
+            flex-direction: column;
+
+            .button {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
     }
 }
