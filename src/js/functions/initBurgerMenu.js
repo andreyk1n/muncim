@@ -4,8 +4,7 @@ export function initBurgerMenu() {
     const nav = document.querySelector('.header__nav');
     const body = document.body;
     const buttonsHeader = document.querySelectorAll('.button__header');
-    const menuLinks = document.querySelectorAll('.header__nav a'); // Або '.header__nav li a', залежно від структури меню
-
+    const menuLinks = document.querySelectorAll('.header__nav a');
     burger.addEventListener('click', (event) => {
       event.stopPropagation();
       burger.classList.toggle('active');
@@ -22,8 +21,6 @@ export function initBurgerMenu() {
         body.classList.remove('no-scroll');
       }
     });
-
-    // Закриття меню при кліку на пункт меню (якорі)
     menuLinks.forEach((link) => {
       link.addEventListener('click', () => {
         burger.classList.remove('active');
