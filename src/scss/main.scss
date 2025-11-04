@@ -151,3 +151,30 @@ h3 {
 .border-bottom {
     border-bottom: 2px solid #000;
 }
+
+.tech {
+    display: flex;
+    justify-content: center;
+    .tech__container {
+        margin: 300px 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (max-width: 992px) {
+            margin: 110px 0 50px 0;
+        }
+
+        h1 {
+            font-size: clamp(30px, 5.5vw, 66px);
+        }
+
+        h2 {
+            font-size: clamp(26px, 4vw, 46px);
+        }
+
+        p, ul li {
+            font-size: clamp(18px, 2vw, 20px);
+        }
+    }
+}
