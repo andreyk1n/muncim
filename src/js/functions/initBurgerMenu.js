@@ -4,6 +4,7 @@ export function initBurgerMenu() {
     const nav = document.querySelector('.header__nav');
     const body = document.body;
     const buttonsHeader = document.querySelectorAll('.button__header');
+    const menuLinks = document.querySelectorAll('.header__nav a'); // Або '.header__nav li a', залежно від структури меню
 
     burger.addEventListener('click', (event) => {
       event.stopPropagation();
@@ -20,6 +21,15 @@ export function initBurgerMenu() {
       } else {
         body.classList.remove('no-scroll');
       }
+    });
+
+    // Закриття меню при кліку на пункт меню (якорі)
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        nav.classList.remove('active');
+        body.classList.remove('no-scroll');
+      });
     });
 
     document.addEventListener('click', (event) => {
